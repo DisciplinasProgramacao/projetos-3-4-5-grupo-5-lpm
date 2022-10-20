@@ -1,8 +1,9 @@
 public class Frota{
 
-    Veiculo veiculo;
+    Veiculo [] veiculo;
     private double rotas;
     private double kmRodados;
+
 
 
     public void carregarVeiculo() {
@@ -13,8 +14,14 @@ public class Frota{
 
     }
 
-    public void localizarVeiculo() {
 
+    public Veiculo localizarPorPlaca(String placa) {
+        for (Veiculo veiculo : veiculos) {
+            if (placa.equals(veiculos.getPlaca())) {
+                return veiculo;
+            }
+        }
+        return null;
     }
 
     public void imprimirRelatorio() {

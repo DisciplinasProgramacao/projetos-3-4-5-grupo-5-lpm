@@ -6,6 +6,15 @@ public abstract class Veiculo {
     private double ipva;
     private double seguro;
     private double autonomiaDiaria;
+    private String placa;
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
 
     /**
      * Construtor. Lança exceção se a placa não coincidir com o padrão
