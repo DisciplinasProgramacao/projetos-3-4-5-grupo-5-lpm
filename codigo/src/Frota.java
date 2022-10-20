@@ -24,9 +24,9 @@ public class Frota{
 
 
     public Veiculo localizarPorPlaca(String placa) {
-        for (Veiculo veiculo : veiculos) {
+        for (Veiculo veiculos : veiculo) {
             if (placa.equals(veiculos.getPlaca())) {
-                return veiculo;
+                return veiculos;
             }
         }
         return null;
