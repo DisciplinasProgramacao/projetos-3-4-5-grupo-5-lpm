@@ -8,13 +8,7 @@ public abstract class Veiculo {
     private double autonomiaDiaria;
     private String placa;
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
+    public Veiculo(){}
 
     /**
      * Construtor. Lança exceção se a placa não coincidir com o padrão
@@ -25,6 +19,60 @@ public abstract class Veiculo {
         if (!Pattern.matches("[A-Z]{3}[0-9][A-Z][0-9]{2}", placa))
             throw new PlacaInvalidaException(placa);
     }
+
+    public int getTanque(){
+        return tanque;
+    }
+
+    public void setTanque(){
+        this.tanque = tanque;
+    }
+
+    public double getIPVA(){
+        return ipva;
+    }
+
+    public void setIPVA(){
+        this.ipva = ipva;
+    }
+
+    public double getSeguro(){
+        return seguro;
+    }
+
+    public void setSeguro(){
+        this.seguro = seguro;
+    }
+
+    public double getautonomiaDiaria(){
+        return autonomiaDiaria;
+    }
+    
+    public void setautonomiaDiaria(){
+        this.autonomiaDiaria = autonomiaDiaria;
+    }
+
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    
+
+    @Override
+	public String toString() {
+		return "{\n" +
+				"tanque=" + tanque + "," + "\n" +
+				"IPVA='" + ipva + '\'' + "," + "\n" +
+				"seguro='" + seguro + '\'' + "," + "\n" +
+				"autonomia Diaria='" + autonomiaDiaria + '\'' + "," + "\n" +
+				"placa='" + placa + '\'' + "\n" +
+				'}';
+	}
 
 }
 

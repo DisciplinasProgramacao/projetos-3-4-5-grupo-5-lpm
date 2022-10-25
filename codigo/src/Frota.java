@@ -23,14 +23,14 @@ public class Frota{
     }
 
 
-    public Veiculo localizarPorPlaca(String placa) {
+    /* public Veiculo localizarPorPlaca(String placa) {
         for (Veiculo veiculo : veiculos) {
             if (placa.equals(veiculos.getPlaca())) {
                 return veiculo;
             }
         }
         return null;
-    }
+    } */
 
     /* public void carregar(String nomeArquivo) throws FileNotFoundException {
         FileInputStream stream = new FileInputStream(nomeArquivo);
@@ -102,12 +102,12 @@ public class Frota{
 
     }
 
-    public boolean addRota(Rota nova) {
+    /* public boolean addRota(Rota nova) {
         boolean resposta = false;
         if (this.rotas.adicionar(nova)) {
             this.kmRodados += nova.getKmRota();
             resposta = true;
         }
         return resposta;
-    }
+    } */
 }
