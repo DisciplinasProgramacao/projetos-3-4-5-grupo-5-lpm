@@ -23,14 +23,14 @@ public class Frota{
     }
 
 
-    /* public Veiculo localizarPorPlaca(String placa) {
-        for (Veiculo veiculo : veiculos) {
+    public Veiculo localizarPorPlaca(String placa) {
+        for (Veiculo veiculos : veiculo) {
             if (placa.equals(veiculos.getPlaca())) {
-                return veiculo;
+                return veiculos;
             }
         }
         return null;
-    } */
+    }
 
     /* public void carregar(String nomeArquivo) throws FileNotFoundException {
         FileInputStream stream = new FileInputStream(nomeArquivo);
