@@ -69,37 +69,6 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    public double getIpva() {
-        return ipva;
-    }
-
-    public void setIpva(double ipva) {
-        this.ipva = ipva;
-    }
-    public double getAutonomiaDiaria() {
-        return autonomiaDiaria;
-    }
-
-    public void setAutonomiaDiaria(double autonomiaDiaria) {
-        this.autonomiaDiaria = autonomiaDiaria;
-    }
-
-    public double getSeguro() {
-        return seguro;
-    }
-
-    public void setSeguro(double seguro) {
-        this.seguro = seguro;
-    }
-    public int getTanque() {
-        return tanque;
-    }
-
-    public void setTanque(int tanque) {
-        this.tanque = tanque;
-    }
-
-    
 
     @Override
 	public String toString() {
