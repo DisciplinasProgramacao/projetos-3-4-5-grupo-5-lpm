@@ -1,54 +1,63 @@
 import java.util.regex.Pattern;
 
-public abstract class Veiculo {
+public class Veiculo {
 
-    private int tanque;
-    private double ipva;
-    private double seguro;
-    private double autonomiaDiaria;
+    private String nome;
+    private String tanque;
+    private String ipva;
+    private String seguro;
+    private String autonomiaDiaria;
     private String placa;
 
-    public Veiculo(){}
+    /* public Veiculo(){} */
 
     /**
      * Construtor. Lança exceção se a placa não coincidir com o padrão
      * @param placa Placa no padrão Mercosul/Brasil: AAA0A00
      * @throws PlacaInvalidaException Em caso de placa fora do padrão
      */
-    public Veiculo(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) throws PlacaInvalidaException {
+    /* public Veiculo(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) throws PlacaInvalidaException {
         if (!Pattern.matches("[A-Z]{3}[0-9][A-Z][0-9]{2}", placa))
             throw new PlacaInvalidaException(placa);
+    } */
+
+    public String getNome(){
+        return nome;
     }
 
-    public int getTanque(){
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getTanque(){
         return tanque;
     }
 
-    public void setTanque(){
+    public void setTanque(String tanque){
         this.tanque = tanque;
     }
 
-    public double getIPVA(){
+    public String getIPVA(){
         return ipva;
     }
 
-    public void setIPVA(){
+    public void setIPVA(String ipva){
         this.ipva = ipva;
     }
 
-    public double getSeguro(){
+    public String getSeguro(){
         return seguro;
     }
 
-    public void setSeguro(){
+    public void setSeguro(String seguro){
         this.seguro = seguro;
     }
 
-    public double getautonomiaDiaria(){
+    public String getautonomiaDiaria(){
         return autonomiaDiaria;
     }
     
-    public void setautonomiaDiaria(){
+    public void setautonomiaDiaria(String autonomiaDiaria){
         this.autonomiaDiaria = autonomiaDiaria;
     }
 
@@ -66,6 +75,7 @@ public abstract class Veiculo {
     @Override
 	public String toString() {
 		return "{\n" +
+                "nome=" + nome + "," + "\n" +
 				"tanque=" + tanque + "," + "\n" +
 				"IPVA='" + ipva + '\'' + "," + "\n" +
 				"seguro='" + seguro + '\'' + "," + "\n" +
