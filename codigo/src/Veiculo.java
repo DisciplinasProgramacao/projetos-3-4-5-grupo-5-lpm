@@ -7,6 +7,15 @@ public abstract class Veiculo {
     private double seguro;
     private double autonomiaDiaria;
     private String placa;
+    private double valorVenda;
+
+    public double getValorVenda() {
+        return valorVenda;
+    }
+
+    public void setValorVenda(double valorVenda) {
+        this.valorVenda = valorVenda;
+    }
 
     public String getPlaca() {
         return placa;
