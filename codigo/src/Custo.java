@@ -1,4 +1,6 @@
-public class Custo implements Alinhamento, Manutencao, Vistoria {
+public interface Custo {
+
+    public double calcularCusto();
 
 
-}
+
