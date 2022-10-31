@@ -1,0 +1,11 @@
+
+public interface IVeiculo {
+	public double CalcularIpva();
+	public double CalcularSeguro();
+	private String nome();
+	public double tanque();
+	public double ipva();
+	public double seguro();
+	public double autonomiaDiaria();
+	public String placa();
+}

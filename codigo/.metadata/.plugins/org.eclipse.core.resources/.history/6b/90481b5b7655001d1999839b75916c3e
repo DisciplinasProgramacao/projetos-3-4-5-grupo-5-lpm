@@ -1,0 +1,11 @@
+
+public class Custo {
+    protected double alinhamento;
+    protected double vistoria;
+    protected double manutencao;
+    
+    public double custoAlinhamento(double alinhamento) {
+		return alinhamento;
+    	
+    }
+}

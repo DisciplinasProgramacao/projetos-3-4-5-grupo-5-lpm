@@ -1,0 +1,21 @@
+public class Carro extends Veiculo implements IVeiculo{
+
+	public Carro(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(tanque, ipva, seguro, autonomiaDiaria, placa);
+		this.ipva = 4;
+		this.seguro = 5;
+		this.tanque = 50;
+	}
+	@Override
+	public double CalcularIpva() {
+		return (this.ipva * precoVenda())/100 ;
+	}
+	@Override
+	public double CalcularSeguro() {
+		return (this.seguro * precoVenda()/100);
+	}
+	public double precoVenda() {
+		return 0;
+	}
+
+}

@@ -1,0 +1,28 @@
+public class Carro extends Veiculo implements IVeiculo,Alinhamento{
+	
+	private double alinhamento = 80;
+	
+	public Carro(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(tanque, ipva, seguro, autonomiaDiaria, placa);
+		this.ipva = 4;
+		this.seguro = 5;
+		this.tanque = 50;
+		this.placa = placa;
+		this.autonomiaDiaria = autonomiaDiaria;
+	}
+	@Override
+	public double calcularIpva() {
+		return (this.ipva * precoVenda())/100 ;
+	}
+	@Override
+	public double calcularSeguro() {
+		return (this.seguro * precoVenda()/100)+300;
+	}
+	public double precoVenda() {
+		return 0;
+	}
+	@Override
+	public double custoAlinhamento() {
+	}
+
+}

@@ -9,8 +9,7 @@ public class Veiculo {
     protected double autonomiaDiaria;
     protected String placa;
     protected double kmRodados;
-
-
+    
     public Veiculo(String nome,double tanque, double ipva, double seguro, double autonomiaDiaria, String placa){
         this.nome = nome;
         this.tanque = tanque;
@@ -19,17 +18,7 @@ public class Veiculo {
         this.autonomiaDiaria = autonomiaDiaria;
         this.placa = placa;
     }
-
-    /**
-     * Construtor. Lança exceção se a placa não coincidir com o padrão
-     * @param placa Placa no padrão Mercosul/Brasil: AAA0A00
-     * @throws PlacaInvalidaException Em caso de placa fora do padrão
-     */
-    /* public Veiculo(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) throws PlacaInvalidaException {
-        if (!Pattern.matches("[A-Z]{3}[0-9][A-Z][0-9]{2}", placa))
-            throw new PlacaInvalidaException(placa);
-    } */
-
+  
     public String getNome(){
         return nome;
     }

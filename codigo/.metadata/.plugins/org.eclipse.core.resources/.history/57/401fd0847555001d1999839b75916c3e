@@ -1,0 +1,6 @@
+
+public class Custo {
+    protected double alinhamento;
+    protected double vistoria;
+    protected double manutencao;
+}

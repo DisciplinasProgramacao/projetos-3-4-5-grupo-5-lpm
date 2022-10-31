@@ -1,0 +1,6 @@
+
+public interface IVeiculo {
+	public double CalcularIpva();
+	public double CalcularSeguro();
+
+}

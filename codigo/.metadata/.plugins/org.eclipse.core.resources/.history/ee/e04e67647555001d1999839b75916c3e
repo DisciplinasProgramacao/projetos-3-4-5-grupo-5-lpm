@@ -1,0 +1,11 @@
+
+public interface IVeiculo {
+	public double calcularIpva();
+	public double calcularSeguro();
+	public String getNome();
+	public double getTanque();
+	public double getIpva();
+	public double getSeguro();
+	public double getAutonomiaDiaria();
+	public String getPlaca();
+}

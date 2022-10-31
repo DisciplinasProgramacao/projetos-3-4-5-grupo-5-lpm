@@ -1,0 +1,72 @@
+public class Veiculo{
+
+    private String nome;
+    protected double tanque;
+    protected double ipva;
+    protected double seguro;
+    protected double autonomiaDiaria;
+    protected String placa;
+
+	public Veiculo(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getTanque() {
+		return tanque;
+	}
+
+	public void setTanque(double tanque) {
+		this.tanque = tanque;
+	}
+
+	public double getIpva() {
+		return ipva;
+	}
+
+	public void setIpva(double ipva) {
+		this.ipva = ipva;
+	}
+
+	public double getSeguro() {
+		return seguro;
+	}
+
+	public void setSeguro(double seguro) {
+		this.seguro = seguro;
+	}
+
+	public double getAutonomiaDiaria() {
+		return autonomiaDiaria;
+	}
+
+	public void setAutonomiaDiaria(double autonomiaDiaria) {
+		this.autonomiaDiaria = autonomiaDiaria;
+	}
+
+	public String getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	@Override
+	public String toString() {
+		return "{\n" +
+                "nome=" + nome + "," + "\n" +
+				"tanque=" + tanque + "," + "\n" +
+				"IPVA='" + ipva + '\'' + "," + "\n" +
+				"seguro='" + seguro + '\'' + "," + "\n" +
+				"autonomia Diaria='" + autonomiaDiaria + '\'' + "," + "\n" +
+				"placa='" + placa + '\'' + "\n" +
+				'}';
+	}
+}
+

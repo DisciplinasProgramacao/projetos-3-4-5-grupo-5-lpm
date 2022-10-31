@@ -1,0 +1,34 @@
+public class Furgao extends Veiculo implements IVeiculo, Alinhamento, Vistoria{
+	
+	private double alinhamento = 120;
+	private double vistoria = 500;
+	
+	public Furgao(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(tanque, ipva, seguro, autonomiaDiaria, placa);
+		this.ipva = 3;
+		this.seguro = 3;
+		this.tanque = 80;
+		}
+	
+	@Override
+	public double calcularIpva() {
+		return (this.ipva * precoVenda())/100 ;
+	}
+	@Override
+	public double calcularSeguro() {
+		return (this.seguro * precoVenda()/100);
+	}
+	public double precoVenda() {
+		return 0;
+	}
+
+	@Override
+	public double custoVistoria() {
+		return 0;
+	}
+
+	@Override
+	public double custoAlinhamento() {
+		return 0;
+	}
+}

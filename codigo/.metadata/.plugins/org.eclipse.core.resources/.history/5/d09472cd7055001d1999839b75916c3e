@@ -1,0 +1,13 @@
+public class Furgao extends Veiculo implements IVeiculo{
+
+	public Furgao(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(tanque, ipva, seguro, autonomiaDiaria, placa);
+		this.ipva = 4;
+		}
+	
+	@Override
+	public double CalcularIpva() {
+		return (this.getIpva() ;
+		
+	}
+}

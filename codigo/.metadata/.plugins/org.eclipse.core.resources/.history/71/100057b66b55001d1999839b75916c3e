@@ -1,0 +1,7 @@
+public class Furgao extends Veiculo{
+
+	public Furgao(int tanque2, double ipva2, double seguro2, double autonomiaDiaria2, String placa2) {
+		super(tanque2, ipva2, seguro2, autonomiaDiaria2, placa2);	}
+
+
+}

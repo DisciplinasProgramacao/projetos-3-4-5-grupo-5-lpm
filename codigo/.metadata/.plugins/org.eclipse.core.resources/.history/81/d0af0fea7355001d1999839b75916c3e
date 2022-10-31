@@ -1,0 +1,7 @@
+
+public interface ICusto {
+	public double custoAlinhamento();
+	public double custoAlinhamentoEVistoria();
+	public double custoManutencaoEVistoria();
+
+}

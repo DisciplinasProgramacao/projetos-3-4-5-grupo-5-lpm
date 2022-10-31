@@ -1,0 +1,25 @@
+
+public class Custo implements Alinhamento, Manutencao, Vistoria {
+	
+	protected double alinhamento;
+	protected double vistoria;
+	protected double manutencao;
+	@Override
+	public double custoVistoria() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double custoManutencao() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double custoAlinhamento() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

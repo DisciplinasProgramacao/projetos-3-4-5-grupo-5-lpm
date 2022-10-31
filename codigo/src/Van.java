@@ -1,3 +1,4 @@
+
 public class Van extends Veiculo implements ICusto{
 	private double precoAlinhamento = 120;
 	private double precoVistoria = 500;
@@ -25,5 +26,4 @@ public class Van extends Veiculo implements ICusto{
 	public double calcularCusto() {
 		return ((this.precoAlinhamento*10000) + (this.precoVistoria*10000))/this.kmRodados;
 	}
-
 }

@@ -1,3 +1,4 @@
+
 public class Caminhao extends Veiculo implements ICusto{
 	
 	private double precoManutencao = 1000;

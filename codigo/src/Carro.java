@@ -1,3 +1,4 @@
+
 public class Carro extends Veiculo implements ICusto{
 	
 	private double precoAlinhamento = 80;

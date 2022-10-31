@@ -1,3 +1,4 @@
+
 public class Furgao extends Veiculo implements ICusto{
 	private double precoAlinhamento = 120;
 	private double precoVistoria = 500;

@@ -1,0 +1,6 @@
+public interface ICusto {
+
+    public double calcularCusto();
+
+
+
