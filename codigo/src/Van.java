@@ -1,30 +1,7 @@
-public class Van extends Veiculo implements Custo{
+/* public class Van extends Veiculo{
 
-    private int precoAlinhamento=120;
-
-   protected Van(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
-        super(tanque, ipva, seguro, autonomiaDiaria, placa);
-    }
-
-    @Override
-    public double calcularAlinhamento(double precoAlinhamento, double kmRodado) {
-        return precoAlinhamento * 10000/kmRodado;
-    }
-
-    @Override
-    public void setTanque(int tanque) {
-        tanque=60;
-        super.setTanque(tanque);
-    }
-
-    @Override
-    public void setIpva(double ipva) {
-        ipva= 3/100*(getValorVenda());
-        super.setIpva(ipva);
-    }
-    @Override
-    public void setSeguro(double seguro) {
-        seguro=3/100*getValorVenda();
-        super.setSeguro(seguro);
+    protected Van(String nome, int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+        super(nome, tanque, ipva, seguro, autonomiaDiaria, placa);
     }
 }
+ */

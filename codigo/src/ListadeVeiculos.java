@@ -1,4 +1,4 @@
-import java.util.Comparator;
+/* import java.util.Comparator;
 import java.util.Iterator;
 
 public class ListadeVeiculos<T extends Comparable<T>> implements Iterable<T>{
@@ -82,3 +82,4 @@ public class ListadeVeiculos<T extends Comparable<T>> implements Iterable<T>{
 
    
 }
+ */
