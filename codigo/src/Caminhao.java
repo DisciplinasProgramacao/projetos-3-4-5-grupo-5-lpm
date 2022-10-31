@@ -1,23 +1,32 @@
-public class Caminhao extends Veiculo{
+public class Caminhao extends Veiculo implements ICusto{
+	
+	private double precoManutencao = 1000;
+	private double precoVistoria = 1000;
+	
+	public Caminhao(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(placa, tanque, ipva, seguro, autonomiaDiaria, placa);
+		this.tanque = 250;
+		this.placa = placa;
+		this.autonomiaDiaria = autonomiaDiaria;
+	}
+	public double precoVenda() {
+		return 0;
+	}
+	@Override
+	public double calcularIpva() {
+		this.ipva = 1;
 
-   protected Caminhao(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
-        super(tanque, ipva, seguro, autonomiaDiaria, placa);
-    }
+		return (this.ipva * precoVenda())/100 ;
+	}
+	@Override
+	public double calcularSeguro() {
+		this.seguro = 2;
+		return (this.seguro * precoVenda()/100)+2000;
+	}
+	@Override
+	public double calcularCusto() {
 
-    @Override
-    public void setTanque(int tanque) {
-        tanque=250;
-        super.setTanque(tanque);
-    }
+		return ((this.precoManutencao*20000)+(this.precoVistoria*3000))/this.kmRodados;
+	}
 
-    @Override
-    public void setIpva(double ipva) {
-        ipva= 1/100*(getValorVenda());
-        super.setIpva(ipva);
-    }
-    @Override
-    public void setSeguro(double seguro) {
-        seguro=2/100*getValorVenda()+2000;
-        super.setSeguro(seguro);
-    }
 }
