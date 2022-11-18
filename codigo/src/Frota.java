@@ -5,15 +5,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import java.io.*;
 import java.util.*;
 
-public class Frota{
+public class Frota {
 
     List<Veiculo> veiculos = new ArrayList<Veiculo>();
     private double rotas;
     private double kmRodados;
+    
 
     public static List<Veiculo> read(String fileName) throws IOException {
         File arquivo = new File(fileName);
@@ -31,7 +34,7 @@ public class Frota{
             fr.close();
             String resp = "";
             List<String> dadosVeiculo = new LinkedList<String>();
-            for(int i = 0; i < content.length(); i++){
+            for (int i = 0; i < content.length(); i++) {
                 char letra = content.charAt(i);
                 if (letra == '=') {
                     i++;
@@ -42,13 +45,15 @@ public class Frota{
                     dadosVeiculo.add(resp);
                     resp = "";
                 }
-                if(content.charAt(i) == '}'){
-                    veiculos.add(new Veiculo(dadosVeiculo.get(0), Double.parseDouble(dadosVeiculo.get(1)), Double.parseDouble(dadosVeiculo.get(2)), Double.parseDouble(dadosVeiculo.get(3)), Double.parseDouble(dadosVeiculo.get(4)), dadosVeiculo.get(5)));
+                if (content.charAt(i) == '}') {
+                    veiculos.add(new Veiculo(dadosVeiculo.get(0), Double.parseDouble(dadosVeiculo.get(1)),
+                            Double.parseDouble(dadosVeiculo.get(2)), Double.parseDouble(dadosVeiculo.get(3)),
+                            Double.parseDouble(dadosVeiculo.get(4)), dadosVeiculo.get(5)));
                     dadosVeiculo.clear();
                 }
             }
-            
-        }else {
+
+        } else {
             throw new FileNotFoundException();
         }
         return veiculos;
@@ -75,15 +80,21 @@ public class Frota{
 
     }
 
-
-    /* public Veiculo localizarPorPlaca(String placa) {
-        for (Veiculo veiculos : veiculo) {
-            if (placa.equals(veiculos.getPlaca())) {
-                return veiculos;
+   /*  public Veiculo localizarPorPlaca(String placa) {
+        for (Veiculo veiculo : veiculos) { // FAZER POR STREAM
+           if (placa.equals(veiculo.getPlaca())) {
+                return veiculo;
             }
         }
         return null;
-    } */
+    }*/
+
+    public Veiculo localizarPorPlaca(String placa) {
+         veiculos.stream()
+                .filter(veiculo -> veiculo.getPlaca() == placa)
+                .forEach(veiculo->System.out.println(veiculo.getNome()));
+        return veiculos;
+    }
 
     public void imprimirRelatorio() {
 
