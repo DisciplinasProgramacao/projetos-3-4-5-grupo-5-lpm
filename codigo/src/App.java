@@ -41,11 +41,12 @@ public class App {
         try {
             List<Veiculo> veiculos = new LinkedList<Veiculo>();
 
-            Veiculo v1 = new Veiculo("teste1", 50, 50, 50, 50, "placa1");
+            /*Veiculo v1 = new Veiculo("teste1", 50, 50, 50, 50, "placa1");
             Veiculo v2 = new Veiculo("teste2", 10, 10, 10, 10, "placa2");
 
             Frota.write("teste.txt", v1.toString());
-            Frota.write("teste.txt", v2.toString());
+            Frota.write("teste.txt", v2.toString());*/
+            
 
             
             int k;
@@ -75,7 +76,7 @@ public class App {
                         System.out.println("Digite a placa:");
                         String placa = ler.nextLine();
 
-                        Veiculo v = new Veiculo(nome, tanque, ipva, seguro, autonomia, placa);
+                        Veiculo v = new Veiculo(nome, tanque, tanqueTotal, ipva, seguro, autonomia, placa);
 
                         Frota.write("teste.txt", v.toString());
                         break;
@@ -83,6 +84,10 @@ public class App {
 
                         break;
                     case 3:
+                    Frota z = new Frota();
+                    z.localizarPorPlaca(placa);
+                    
+                    
 
                         break;
                     case 4:

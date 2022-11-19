@@ -4,4 +4,6 @@ public interface ICusto{
 	double calcularIpva();
 
 	double calcularSeguro();
+
+	double calcularManutencao();
 }

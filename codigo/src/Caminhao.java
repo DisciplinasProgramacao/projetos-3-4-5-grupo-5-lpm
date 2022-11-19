@@ -4,8 +4,8 @@ public class Caminhao extends Veiculo implements ICusto{
 	private double precoManutencao = 1000;
 	private double precoVistoria = 1000;
 	
-	public Caminhao(int tanque, double ipva, double seguro, double autonomiaDiaria, String placa) {
-		super(placa, tanque, ipva, seguro, autonomiaDiaria, placa);
+	public Caminhao(int tanque, double tanqueTotal, double ipva, double seguro, double autonomiaDiaria, String placa) {
+		super(placa, tanque, tanqueTotal, ipva, seguro, autonomiaDiaria, placa);
 		this.tanque = 250;
 		this.placa = placa;
 		this.autonomiaDiaria = autonomiaDiaria;
@@ -27,7 +27,18 @@ public class Caminhao extends Veiculo implements ICusto{
 	@Override
 	public double calcularCusto() {
 
-		return ((this.precoManutencao*20000)+(this.precoVistoria*3000))/this.kmRodados;
+		return (calcularManutencao()+(this.precoManutencao*20000)+(this.precoVistoria*3000))/this.kmRodados;
+	}
+	@Override
+	public double calcularManutencao(){
+		System.out.println("Há alguma manutenção extra?");
+		String manutencao = ler.nextLine();
+		double valorManutencao=0;
+		if (manutencao == "sim"){
+			System.out.println("Digite o valor da manunteção");
+		 valorManutencao = ler.nextDouble();		
+		}
+		return valorManutencao;
 	}
 
 }
