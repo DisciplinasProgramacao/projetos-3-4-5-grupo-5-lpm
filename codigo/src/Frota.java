@@ -14,8 +14,7 @@ import java.util.*;
 public class Frota {
 
     List<Veiculo> veiculos = new ArrayList<Veiculo>();
-    private double rotas;
-    private double kmRodados;
+    
     
 
     public static List<Veiculo> read(String fileName) throws IOException {
@@ -93,6 +92,7 @@ public class Frota {
          veiculos.stream()
                 .filter(veiculo -> veiculo.getPlaca() == placa)
                 .forEach(veiculo->System.out.println(veiculo.getNome()));
+               
          
     }
 
