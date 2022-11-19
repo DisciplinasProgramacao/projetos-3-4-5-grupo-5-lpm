@@ -12,6 +12,7 @@ public class Veiculo {
     protected double autonomiaDiaria;
     protected String placa;
     protected double kmRodados;
+    protected Rota rota;
     
     public Veiculo(String nome,double tanque, double tanqueAtual, double ipva, double seguro, double autonomiaDiaria, String placa){
         this.nome = nome;
@@ -78,6 +79,13 @@ public class Veiculo {
     public void setTanqueAtual(double tanqueAtual) {
         this.tanqueAtual = tanqueAtual;
     }
+    public void adicionarRota(){
+        Veiculo veiculo = new Veiculo( nome, tanque, tanqueAtual,  ipva,  seguro,  autonomiaDiaria,  placa);
+        if (rota.getKmRota()>= getautonomiaDiaria()){            
+            veiculo.add(rota);
+        }
+
+    }
 
 
     public void cadastrar(String nome, String placa){
@@ -87,6 +95,7 @@ public class Veiculo {
     public void preencherTanque(double tanqueTotal, double tanque){
         System.out.println("Digite a quantidade a ser preenchida no tanque");
         double quantidade = ler.nextDouble();
+        
         if (getTanque()-getTanqueAtual()< quantidade){
             System.out.println("Quantidade impossível de ser preenchida");
         } else {
