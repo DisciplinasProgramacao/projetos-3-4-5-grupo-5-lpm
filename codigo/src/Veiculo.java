@@ -1,18 +1,22 @@
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Veiculo {
+    Scanner ler = new Scanner(System.in);
 
 	protected String nome;
     protected double tanque;
+    protected double tanqueAtual;
     protected double ipva;
     protected double seguro;
     protected double autonomiaDiaria;
     protected String placa;
     protected double kmRodados;
     
-    public Veiculo(String nome,double tanque, double ipva, double seguro, double autonomiaDiaria, String placa){
+    public Veiculo(String nome,double tanque, double tanqueAtual, double ipva, double seguro, double autonomiaDiaria, String placa){
         this.nome = nome;
         this.tanque = tanque;
+        this.tanqueAtual= tanqueAtual;
         this.ipva = ipva;
         this.seguro = seguro;
         this.autonomiaDiaria = autonomiaDiaria;
@@ -67,10 +71,27 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+    public double getTanqueAtual() {
+        return tanqueAtual;
+    }
+
+    public void setTanqueAtual(double tanqueAtual) {
+        this.tanqueAtual = tanqueAtual;
+    }
+
 
     public void cadastrar(String nome, String placa){
         this.setNome(nome);
         this.setPlaca(placa);
+    }
+    public void preencherTanque(double tanqueTotal, double tanque){
+        System.out.println("Digite a quantidade a ser preenchida no tanque");
+        double quantidade = ler.nextDouble();
+        if (getTanque()-getTanqueAtual()< quantidade){
+            System.out.println("Quantidade impossível de ser preenchida");
+        } else {
+            setTanqueAtual(getTanqueAtual()+ quantidade);
+        }
     }
 
     @Override

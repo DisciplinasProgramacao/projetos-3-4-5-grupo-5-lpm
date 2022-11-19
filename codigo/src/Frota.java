@@ -48,7 +48,7 @@ public class Frota {
                 if (content.charAt(i) == '}') {
                     veiculos.add(new Veiculo(dadosVeiculo.get(0), Double.parseDouble(dadosVeiculo.get(1)),
                             Double.parseDouble(dadosVeiculo.get(2)), Double.parseDouble(dadosVeiculo.get(3)),
-                            Double.parseDouble(dadosVeiculo.get(4)), dadosVeiculo.get(5)));
+                            Double.parseDouble(dadosVeiculo.get(4)), Double.parseDouble(dadosVeiculo.get(5)), dadosVeiculo.get(6)));
                     dadosVeiculo.clear();
                 }
             }
@@ -89,11 +89,11 @@ public class Frota {
         return null;
     }*/
 
-    public Veiculo localizarPorPlaca(String placa) {
+    public void localizarPorPlaca(String placa) {
          veiculos.stream()
                 .filter(veiculo -> veiculo.getPlaca() == placa)
                 .forEach(veiculo->System.out.println(veiculo.getNome()));
-        return veiculos;
+         
     }
 
     public void imprimirRelatorio() {
