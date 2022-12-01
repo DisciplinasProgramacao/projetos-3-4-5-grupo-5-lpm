@@ -3,23 +3,20 @@ public class Furgao extends Veiculo implements ICusto{
 	private double precoAlinhamento = 120;
 	private double precoVistoria = 500;
 
-	public Furgao(int tanque, double tanqueTotal, double ipva, double seguro, double autonomiaDiaria, String placa) {
-		super(placa, tanque, tanqueTotal, ipva, seguro, autonomiaDiaria, placa);
+	public Furgao(int tanque, double tanqueTotal, double ipva, double seguro, double autonomiaDiaria, String placa, double precoVenda) {
+		super(placa, tanque, tanqueTotal, ipva, seguro, autonomiaDiaria, placa, precoVenda);
 		this.tanque = 80;
 		}
 	
 	@Override
 	public double calcularIpva() {
 		this.ipva = 3;
-		return (this.ipva * precoVenda())/100 ;
+		return (this.ipva * getPrecoVenda())/100 ;
 	}
 	@Override
 	public double calcularSeguro() {
 		this.seguro = 3;
-		return (this.seguro * precoVenda()/100);
-	}
-	public double precoVenda() {
-		return 0;
+		return (this.seguro * getPrecoVenda()/100);
 	}
 
 	@Override

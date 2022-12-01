@@ -30,7 +30,7 @@ public class App {
         System.out.println("1 - Cadastrar veículo");
         System.out.println("2 - Cadastrar Rotas para um veículo");
         System.out.println("3 - Localizar um veículo da frota");
-        System.out.println("4 - Gerar currículo");
+        System.out.println("4 - Gerar relatório");
         System.out.println("0 - Sair e salvar");
 
     }
@@ -41,14 +41,14 @@ public class App {
         try {
             List<Veiculo> veiculos = new LinkedList<Veiculo>();
 
-            /*Veiculo v1 = new Veiculo("teste1", 50, 50, 50, 50, "placa1");
-            Veiculo v2 = new Veiculo("teste2", 10, 10, 10, 10, "placa2");
+            /*
+             * Veiculo v1 = new Veiculo("teste1", 50, 50, 50, 50, "placa1");
+             * Veiculo v2 = new Veiculo("teste2", 10, 10, 10, 10, "placa2");
+             * 
+             * Frota.write("teste.txt", v1.toString());
+             * Frota.write("teste.txt", v2.toString());
+             */
 
-            Frota.write("teste.txt", v1.toString());
-            Frota.write("teste.txt", v2.toString());*/
-            
-
-            
             int k;
             do {
                 printMenu();
@@ -60,34 +60,21 @@ public class App {
                         System.out.println("Digite o nome do Veículo:");
                         String nome = ler.nextLine();
 
-                        System.out.println("Digite o Tanque:");
-                        double tanque = ler.nextDouble();
-
-                        System.out.println("Digite o IPVA:");
-                        double ipva = ler.nextDouble();
-
-                        System.out.println("Digite o Seguro:");
-                        double seguro = ler.nextDouble();
-
-                        System.out.println("Digite a autonomia:");
-                        double autonomia = ler.nextDouble();
-
-                        String placabug = ler.nextLine();
                         System.out.println("Digite a placa:");
                         String placa = ler.nextLine();
 
-                        Veiculo v = new Veiculo(nome, tanque, tanqueTotal, ipva, seguro, autonomia, placa);
+                        System.out.println("Digite o preço de venda:");
+                        Double precoVenda = ler.nextDouble();
+
+                        Veiculo v = new Veiculo();
 
                         Frota.write("teste.txt", v.toString());
                         break;
                     case 2:
-
                         break;
                     case 3:
-                    Frota z = new Frota();
-                    z.localizarPorPlaca(placa);
-                    
-                    
+                        Frota z = new Frota();
+                        z.localizarPorPlaca(placa);
 
                         break;
                     case 4:

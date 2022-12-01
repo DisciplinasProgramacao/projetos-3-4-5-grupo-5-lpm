@@ -1,21 +1,13 @@
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import java.io.*;
 import java.util.*;
 
 public class Frota {
 
     List<Veiculo> veiculos = new ArrayList<Veiculo>();
-    
-    
 
     public static List<Veiculo> read(String fileName) throws IOException {
         File arquivo = new File(fileName);
@@ -47,7 +39,8 @@ public class Frota {
                 if (content.charAt(i) == '}') {
                     veiculos.add(new Veiculo(dadosVeiculo.get(0), Double.parseDouble(dadosVeiculo.get(1)),
                             Double.parseDouble(dadosVeiculo.get(2)), Double.parseDouble(dadosVeiculo.get(3)),
-                            Double.parseDouble(dadosVeiculo.get(4)), Double.parseDouble(dadosVeiculo.get(5)), dadosVeiculo.get(6)));
+                            Double.parseDouble(dadosVeiculo.get(4)), Double.parseDouble(dadosVeiculo.get(5)),
+                            dadosVeiculo.get(6)));
                     dadosVeiculo.clear();
                 }
             }
@@ -71,35 +64,22 @@ public class Frota {
         fw.close();
     }
 
-    public void carregarVeiculo() {
-
-    }
-
-    public void salvarVeiculo() {
-
-    }
-
-   /*  public Veiculo localizarPorPlaca(String placa) {
-        for (Veiculo veiculo : veiculos) { // FAZER POR STREAM
-           if (placa.equals(veiculo.getPlaca())) {
-                return veiculo;
-            }
-        }
-        return null;
-    }*/
+    /*
+     * public Veiculo localizarPorPlaca(String placa) {
+     * for (Veiculo veiculo : veiculos) { // FAZER POR STREAM
+     * if (placa.equals(veiculo.getPlaca())) {
+     * return veiculo;
+     * }
+     * }
+     * return null;
+     * }
+     */
 
     public void localizarPorPlaca(String placa) {
-         veiculos.stream()
+        veiculos.stream()
                 .filter(veiculo -> veiculo.getPlaca() == placa)
-                .forEach(veiculo->System.out.println(veiculo.getNome()));
-               
-         
+                .forEach(veiculo -> System.out.println(veiculo.getNome()));
     }
-
-    public void imprimirRelatorio() {
-
-    }
-
     public void addVeiculo() {
 
     }
